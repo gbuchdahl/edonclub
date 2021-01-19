@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 function SEO({ description, lang, meta, title }) {
-  const { site, image } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -21,16 +21,12 @@ function SEO({ description, lang, meta, title }) {
             author
           }
         }
-        image: file(relativePath: { eq: "edontext.svg" }) {
-          publicURL
-        }
       }
     `
   );
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-  const publicUrl = image.publicUrl;
 
   return (
     <Helmet
@@ -56,7 +52,7 @@ function SEO({ description, lang, meta, title }) {
           property: `og:type`,
           content: `website`,
         },
-        { property: `og:image`, content: publicUrl },
+        { property: `og:image`, content: "https://i.imgur.com/PAFpGYK.jpg" },
         {
           name: `twitter:card`,
           content: `summary`,
