@@ -1,9 +1,9 @@
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import React from "react";
 import { Image, Navbar, Nav } from "react-bootstrap";
 
-const Header = ({}) => {
+const Header = () => {
   const data = useStaticQuery(graphql`
     query {
       edonText: file(relativePath: { eq: "edontext.svg" }) {
@@ -41,6 +41,8 @@ const Header = ({}) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <div
+            tabIndex={0}
+            role="button"
             className="header__navlink"
             onClick={() => scrollTo("#about")}
             aria-label="button"
@@ -48,6 +50,8 @@ const Header = ({}) => {
             <Nav.Link className="header__navlink">About</Nav.Link>
           </div>
           <div
+            tabIndex={0}
+            role="button"
             className="header__navlink"
             onClick={() => scrollTo("#board")}
             aria-label="button"
@@ -55,6 +59,8 @@ const Header = ({}) => {
             <Nav.Link className="header__navlink">Board</Nav.Link>
           </div>
           <div
+            tabIndex={0}
+            role="button"
             className="header__navlink"
             onClick={() => scrollTo("#contact")}
             aria-label="button"
