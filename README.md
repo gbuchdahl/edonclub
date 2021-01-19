@@ -1,6 +1,8 @@
 # The Edon Club
 
-[Public site](https://theedonclub.com) for The Edon Club. Written using Gatsby, designed using Figma, deployed using Netlify. 
+[Public site](https://theedonclub.com) for The Edon Club. Written using Gatsby, designed using Figma, deployed using Netlify.
+
+![Home page screenshot](./screenshot.png)
 
 - `gatsby develop` to run the dev server
 - `yarn add xxx` to add dependencies
