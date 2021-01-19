@@ -84,7 +84,7 @@ body {
   }
 
   @include media-breakpoint-down(sm) {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 }
 

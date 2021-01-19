@@ -8,7 +8,7 @@ import Contact from "../components/Contact";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Welcome" />
+    <SEO title="The Edon Club at Yale" />
     <Hero />
     <About />
     <Board />
