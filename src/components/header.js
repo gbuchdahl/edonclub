@@ -1,42 +1,73 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { graphql, Link, useStaticQuery } from "gatsby";
+import scrollTo from "gatsby-plugin-smoothscroll";
+import React from "react";
+import { Image, Navbar, Nav } from "react-bootstrap";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = ({}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      edonText: file(relativePath: { eq: "edontext.svg" }) {
+        publicURL
+      }
+      hamburger: file(relativePath: { eq: "Hamburger.svg" }) {
+        publicURL
+      }
+    }
+  `);
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  return (
+    <Navbar expand="md" className="header__Navbar d-flex align-content-center">
+      <Navbar.Brand>
+        <Nav.Link onClick={() => scrollTo("#top")}>
+          <Image
+            style={{
+              width: 174,
+              marginTop: -32,
+              marginBottom: -32,
+              marginLeft: -16,
+            }}
+            src={data.edonText.publicURL}
+          />
+        </Nav.Link>
+      </Navbar.Brand>
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        className="header__Toggle"
+      >
+        <div className="my-auto flex-grow-1">
+          <Image className="my-auto" src={data.hamburger.publicURL} />
+        </div>
+      </Navbar.Toggle>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ml-auto">
+          <div
+            className="header__navlink"
+            onClick={() => scrollTo("#about")}
+            aria-label="button"
+          >
+            <Nav.Link className="header__navlink">About</Nav.Link>
+          </div>
+          <div
+            className="header__navlink"
+            onClick={() => scrollTo("#board")}
+            aria-label="button"
+          >
+            <Nav.Link className="header__navlink">Board</Nav.Link>
+          </div>
+          <div
+            className="header__navlink"
+            onClick={() => scrollTo("#contact")}
+            aria-label="button"
+          >
+            <Nav.Link className="header__navlink">Contact</Nav.Link>
+          </div>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+};
+Header.propTypes = {};
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+Header.defaultProps = {};
 
-export default Header
+export default Header;
