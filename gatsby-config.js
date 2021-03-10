@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `The Edon Club`,
-    description: `High Street's first coeducational social group.`,
+    description: `High Street's only coeducational social group.`,
     author: `@gbuchdahl`,
   },
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/edoncrest.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
