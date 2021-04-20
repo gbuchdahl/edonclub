@@ -7,7 +7,7 @@ import Board from "../components/Board";
 import Contact from "../components/Contact";
 
 const IndexPage = () => (
-  <Layout>
+  <Layout isHomePage>
     <SEO title="The Edon Club at Yale" />
     <Hero />
     <About />

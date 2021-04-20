@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `The Edon Club`,
@@ -29,6 +33,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: '@mkitio/gatsby-theme-password-protect',
+      options: {
+        password: process.env.PASSWORD,
+        pagePaths: ['/alumni'],
+        partialMatching: true,
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

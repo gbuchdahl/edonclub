@@ -23,6 +23,20 @@ body {
   color: inherit;
 }
 
+.header__navlink > * {
+  color: $edon-green !important;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.header__navlink:visited > * {
+  color: inherit;
+}
+
+.header__navlink:hover > * {
+  text-decoration: none;
+}
+
 .header__Toggle {
   display: flex;
   align-items: center;
@@ -118,4 +132,10 @@ body {
 .formbutton:hover {
   background-color: $edon-green;
   opacity: 90%;
+}
+
+.password_text {
+  color: $edon-green !important;
+  font-weight: 900;
+  font-size: 40px;
 }
