@@ -24,29 +24,28 @@ const Board = () => {
       <div className="col-12 col-md-8">
         <h1 className="section__title mb-5">Who We Are</h1>
         <div className="d-flex flex-wrap">
-          {makeSection("President", ["Nathan Somerville"])}
+          {makeSection("President", ["Stephan Billingslea"])}
           {makeSection("Recruitment", [
-            "Amy Ren",
-            "Stephan Billingslea",
-            "Cameron Janssens",
-          ])}
-          {makeSection("Development", [
-            "Lucy Minden",
-            "Alex Surratt",
-            "Syimyk Kyshtoobaev",
+            "Alice Litvak",
+            "Victoria Vera",
+            "Sarah Sadati",
           ])}
           {makeSection("Social", [
-            "Gabriel Buchdahl",
-            "Daniel Freedline",
-            "Enrique Chuidian",
+            "Cam Janssens",
+            "Grace Campos",
+            "Iggy Diaz",
           ])}
-          {makeSection("Finances", ["Neil Udassi", "Preston Smith"])}
-          {makeSection("Chaplains", ["Jarett Malouf", "Sam Ryan"])}
-          {makeSection("Coordinators", ["Will Lawrence", "Jackson Kuller"])}
-          {makeSection("Service", ["Matthew Murillo"])}
-          {makeSection("Housing", ["Diego Miro"])}
-          {makeSection("Oracle", ["Cam Rao"])}
-          {makeSection("Comms", ["Nico Trigo"])}
+          {makeSection("Development", [
+            "Serena Lin",
+            "JC Lignelli"
+          ])}
+          {makeSection("Finances", ["Lucy Minden"])}
+          {makeSection("Chaplains", ["Renée Sanacora", "Robby Hill"])}
+          {makeSection("Membership", ["Alex Surratt"])}
+          {makeSection("Service", ["Laz Vazquez"])}
+          {makeSection("Creative", ["Baltazar Lora"])}
+          {makeSection("Historian", ["Andrew Kornfeld"])}
+          {makeSection("Alumni Affairs", ["Gabriel Buchdahl"])}
         </div>
       </div>
     </div>
