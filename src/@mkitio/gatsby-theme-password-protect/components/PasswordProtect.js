@@ -19,8 +19,8 @@ const PasswordProtect = () => {
   };
 
   return (
-    <div className='text-center pt-5 mt-5 '>
-      <h1 className='password_text'>Edon Alumni Portal</h1>
+    <div className='text-center'>
+      <h1 className='password_text pt-5 mt-5'>Edon Alumni Portal</h1>
       <div className='row justify-content-center mt-3'>
         <div className='col-sm-8 col-md-4'>
           <Form className='ml-auto mr-auto' onSubmit={onSubmit}>

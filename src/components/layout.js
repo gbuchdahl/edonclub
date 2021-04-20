@@ -34,12 +34,12 @@ const Layout = ({ children, isHomePage },) => {
         }}
       >
         <main>{children}</main>
-        <footer className="section">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a> by @gbuchdahl
-        </footer>
       </div>
+      <footer className="section mb-5 text-center text-white">
+        © {new Date().getFullYear()}, Built with
+          {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a> by @gbuchdahl
+        </footer>
     </div>
   );
 };
