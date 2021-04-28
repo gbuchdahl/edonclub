@@ -39,6 +39,8 @@ const PasswordProtect = () => {
             >
               Enter
                 </Button>
+
+            <p className='text-white mt-2'>Password will be remembered - only enter on a personal computer.</p>
           </Form>
         </div>
 
