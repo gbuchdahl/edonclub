@@ -24,14 +24,12 @@ const Board = () => {
       <div className="col-12 col-md-8">
         <h1 className="section__title mb-5">Who We Are</h1>
         <div className="d-flex flex-wrap">
-          {makeSection("President", ["Stephan Billingslea"])}
+          {makeSection("Presidents", ["Alice Litvak", "Cameron Janssens"])}
           {makeSection("Recruitment", [
-            "Alice Litvak",
             "Victoria Vera",
             "Sarah Sadati",
           ])}
           {makeSection("Social", [
-            "Cam Janssens",
             "Grace Campos",
             "Iggy Diaz",
           ])}
@@ -50,6 +48,6 @@ const Board = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Board;
