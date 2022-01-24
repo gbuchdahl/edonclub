@@ -33,10 +33,7 @@ const Board = () => {
             "Grace Campos",
             "Iggy Diaz",
           ])}
-          {makeSection("Development", [
-            "Serena Lin",
-            "JC Lignelli"
-          ])}
+          {makeSection("Development", ["Serena Lin"])}
           {makeSection("Finances", ["Lucy Minden"])}
           {makeSection("Chaplains", ["Renée Sanacora", "Robby Hill"])}
           {makeSection("Membership", ["Alex Surratt"])}
