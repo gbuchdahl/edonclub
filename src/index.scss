@@ -97,6 +97,10 @@ body {
     flex-basis: 25%;
   }
 
+  @include media-breakpoint-up(xl) {
+    flex-basis: 20%;
+  }
+
   @include media-breakpoint-down(sm) {
     flex-basis: 100%;
   }
